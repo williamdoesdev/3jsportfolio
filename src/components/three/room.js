@@ -60,7 +60,7 @@ export default function Model({ ...props }) {
       <mesh castShadow receiveShadow geometry={nodes.Shelf.geometry} material={materials['Material.011']} position={[-2, 3, -0.5]} />
       <mesh castShadow receiveShadow geometry={nodes.Desk.geometry} material={materials['Material.015']} position={[-1.26, 0.33, -0.53]} scale={[1, 0.06, 2.5]} />
       <mesh castShadow receiveShadow geometry={nodes.Chair.geometry} material={materials['Material.064']} position={[1.1, -0.8, -1.68]} rotation={[0, 0.27, 0]} scale={[0.74, 0.37, 0.74]}>
-        <mesh castShadow receiveShadow geometry={nodes.Chair_Seat.geometry} material={materials['Material.066']} position={[0, 1.88, 0]} scale={[0.34, 0.08, 0.34]} />
+        <mesh receiveShadow geometry={nodes.Chair_Seat.geometry} material={materials['Material.066']} position={[0, 1.88, 0]} scale={[0.34, 0.08, 0.34]} />
         <mesh castShadow receiveShadow geometry={nodes.Chair_Stem.geometry} material={materials['Material.065']} position={[0, 0.31, 0]} scale={[0.76, 1.52, 0.76]} />
       </mesh>
       <mesh castShadow receiveShadow geometry={nodes.Monitor.geometry} material={materials['Material.019']} position={[-1.48, 0.64, -2.17]} rotation={[0, -0.26, 0]} scale={[0.25, 0.02, 0.38]} />
@@ -148,6 +148,7 @@ export default function Model({ ...props }) {
       <mesh castShadow receiveShadow geometry={nodes.Plant003_Leaf028.geometry} material={materials['Material.074']} position={[-0.7, -0.46, 3.1]} rotation={[1.38, 0.13, -0.14]} scale={1.23} />
       <mesh castShadow receiveShadow geometry={nodes.Plant003_Leaf029.geometry} material={materials['Material.074']} position={[-0.72, -0.48, 2.98]} rotation={[1.41, 0, -0.14]} scale={1.28} />
       <mesh castShadow receiveShadow geometry={nodes.Plant003_Leaf030.geometry} material={materials['Material.074']} position={[-0.7, -0.46, 3.05]} rotation={[1.49, 0.17, -0.18]} scale={1.44} />
+      <mesh castShadow receiveShadow geometry={nodes.Cube.geometry} material={materials.Material} position={[-1.22, 2.75, 2.88]} />
     </group>
   )
 }

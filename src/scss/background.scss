@@ -1,0 +1,17 @@
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(35deg, #f5744c, #ffcb0d);
+  background-size: 150%;
+  animation: bg-animation 10s ease-in-out infinite alternate;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
