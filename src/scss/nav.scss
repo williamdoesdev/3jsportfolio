@@ -1,175 +1,193 @@
 @import url("https://use.typekit.net/kxi2tec.css");
 
 nav {
+  position: absolute;
+  z-index: 1;
+
+  .header-logo-container {
     position: absolute;
-    z-index: 1;
+    width: max-content;
 
-    .header-logo-container{
-        position: absolute;
-        width: max-content;
-
-        h1{
-            display: inline;
-            font-family: source-sans-pro, sans-serif;
-            font-weight: 300;
-            font-style: normal;
-            font-size: 3rem;
-            color: white;
-            cursor: normal;
-            user-select: none;
-            margin: 0 0 0 1rem;
-        }
-
-        h1::after{
-            content: "Dev";
-            display: inline;
-            color: white;
-            animation: header-title-animation 10s linear infinite;
-        }
-
-        div{
-            display: inline-block;
-            background: white;
-            width: 2px;
-            height: 2rem;
-            margin-left: 0.25rem;
-            animation: header-cursor-animation 10s step-end infinite;
-        }
+    h1 {
+      display: inline;
+      font-family: source-sans-pro, sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 3rem;
+      color: white;
+      cursor: normal;
+      user-select: none;
+      margin: 0 0 0 1rem;
     }
 
-    ul{
-        position: absolute;
-        display: flex;
-        width: 100vw;
-        list-style: none;
-        justify-content: center;
-
-        li{
-            padding: 1rem 1rem;
-            cursor: pointer;
-
-            a{
-                font-family: source-sans-pro, sans-serif;
-                font-weight: 300;
-                font-style: normal;
-                font-size: 2rem;
-                color: white;
-                text-decoration: none;
-            }
-        }
-
-        li::after{
-                content: "";
-                display: inline-block;
-                width: 0;
-                height: 2px;
-                background: white;
-                transform: translateY(-1rem);
-                transition: ease-in-out 0.15s;
-        }
-
-        li:hover::after{
-            width: 100%;
-            transition: ease-in-out 0.15s;
-        }
+    h1::after {
+      content: "Dev";
+      display: inline;
+      color: white;
+      animation: header-title-animation 10s linear infinite;
     }
+
+    div {
+      display: inline-block;
+      background: white;
+      width: 2px;
+      height: 2rem;
+      margin-left: 0.25rem;
+      animation: header-cursor-animation 10s step-end infinite;
+    }
+  }
+
+  ul {
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    list-style: none;
+    justify-content: center;
+
+    li {
+      padding: 1rem 1rem;
+      cursor: pointer;
+
+      a {
+        font-family: source-sans-pro, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 2rem;
+        color: white;
+        text-decoration: none;
+      }
+    }
+
+    li::after {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 2px;
+      background: white;
+      transform: translateY(-1rem);
+      transition: ease-in-out 0.15s;
+    }
+
+    li:hover::after {
+      width: 100%;
+      transition: ease-in-out 0.15s;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  nav {
+    ul {
+      justify-content: center;
+      flex-direction: column;
+
+      li {
+        margin-left: auto;
+        padding: 0 1rem;
+
+        a {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
 }
 
 @keyframes header-cursor-animation {
-    0% {
-        background: white;
-    }
-    10% {
-      background: none;
-    }
-    15% {
-        background: white;
-    }
-    20% {
-        background: none;
-    }
-    25% {
-        background: white;
-    }
-    30% {
-        background: none;
-    }
-    35% {
-        background: white;
-    }
-    40% {
-        background: none;
-    }
-    45% {
-        background: white;
-    }
-    55% {
-        background: white;
-    }
-    60% {
-        background: none;
-    }
-    65% {
-        background: white;
-    }
-    70% {
-        background: none;
-    }
-    75% {
-        background: white;
-    }
-    80% {
-      background: none;
-    }
-    85% {
-      background: white;
-    }
-    90% {
-        background: none;
-    }
-    95% {
-        background: white;
-    }
+  0% {
+    background: white;
   }
+  10% {
+    background: none;
+  }
+  15% {
+    background: white;
+  }
+  20% {
+    background: none;
+  }
+  25% {
+    background: white;
+  }
+  30% {
+    background: none;
+  }
+  35% {
+    background: white;
+  }
+  40% {
+    background: none;
+  }
+  45% {
+    background: white;
+  }
+  55% {
+    background: white;
+  }
+  60% {
+    background: none;
+  }
+  65% {
+    background: white;
+  }
+  70% {
+    background: none;
+  }
+  75% {
+    background: white;
+  }
+  80% {
+    background: none;
+  }
+  85% {
+    background: white;
+  }
+  90% {
+    background: none;
+  }
+  95% {
+    background: white;
+  }
+}
 
-  @keyframes header-title-animation {
-    0% {
-      content: "Dev";
-    }
-    45% {
-      content: "Dev";
-    }
-    46% {
-      content: "De";
-    }
-    47% {
-      content: "Des";
-    }
-    48% {
-      content: "Desi";
-    }
-    49% {
-      content: "Desig";
-    }
-    50% {
-      content: "Design";
-    }
-    95% {
-      content: "Design";
-    }
-    96% {
-      content: "Desig";
-    }
-    97% {
-      content: "Desi";
-    }
-    98% {
-      content: "Des";
-    }
-    99% {
-      content: "De";
-    }
-    100% {
-      content: "Dev";
-    }
+@keyframes header-title-animation {
+  0% {
+    content: "Dev";
   }
+  45% {
+    content: "Dev";
+  }
+  46% {
+    content: "De";
+  }
+  47% {
+    content: "Des";
+  }
+  48% {
+    content: "Desi";
+  }
+  49% {
+    content: "Desig";
+  }
+  50% {
+    content: "Design";
+  }
+  95% {
+    content: "Design";
+  }
+  96% {
+    content: "Desig";
+  }
+  97% {
+    content: "Desi";
+  }
+  98% {
+    content: "Des";
+  }
+  99% {
+    content: "De";
+  }
+  100% {
+    content: "Dev";
+  }
+}

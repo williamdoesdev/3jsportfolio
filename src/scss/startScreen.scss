@@ -5,93 +5,99 @@
   background: #253143;
   z-index: 3;
 
-  .start-title-container {
-    min-width: 25rem;
-    text-align: center;
-    margin-top: 500px;
+  .start-screen-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-    h1 {
-      display: inline;
-      font-family: source-sans-pro, sans-serif;
-      font-weight: 300;
-      font-style: normal;
-      font-size: 3rem;
-      color: white;
-      cursor: normal;
-      user-select: none;
+    .start-title-container {
+      min-width: 25rem;
+      text-align: center;
+
+      h1 {
+        display: inline;
+        font-family: source-sans-pro, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 3rem;
+        color: white;
+        cursor: normal;
+        user-select: none;
+      }
+
+      h1::after {
+        content: "Dev";
+        display: inline;
+        background-image: linear-gradient(0deg, #f5744c 0%, #ffcb0d 100%);
+        background-clip: text;
+        color: transparent;
+        animation: header-title-animation 10s linear infinite;
+      }
+
+      .start-title-cursor {
+        display: inline-block;
+        background-image: linear-gradient(0deg, #f5744c 0%, #ffcb0d 100%);
+        width: 2px;
+        height: 2rem;
+        margin-left: 0.25rem;
+        animation: header-cursor-animation 10s linear infinite;
+      }
     }
 
-    h1::after {
-      content: "Dev";
-      display: inline;
-      background-image: linear-gradient(0deg, #f5744c 0%, #ffcb0d 100%);
-      background-clip: text;
-      color: transparent;
-      animation: header-title-animation 10s linear infinite;
-    }
-
-    .start-title-cursor {
-      display: inline-block;
-      background-image: linear-gradient(0deg, #f5744c 0%, #ffcb0d 100%);
-      width: 2px;
-      height: 2rem;
-      margin-left: 0.25rem;
-      animation: header-cursor-animation 10s linear infinite;
-    }
-  }
-
-  .start-icons-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 2rem 4rem;
-    width: min(100vw, 17.5rem);
-    gap: 1rem 0;
-    margin: auto;
-
-    img {
+    .start-icons-grid {
       display: grid;
-      justify-self: center;
-      align-self: center;
-      max-width: 75px;
-      max-height: 75px;
-      animation: header-icons-animation 10s linear infinite;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 2rem 4rem;
+      width: min(100vw, 17.5rem);
+      gap: 1rem 0;
+      margin: auto;
+
+      img {
+        display: grid;
+        justify-self: center;
+        align-self: center;
+        max-width: 75px;
+        max-height: 75px;
+        animation: header-icons-animation 10s linear infinite;
+      }
+
+      img[designIcon="true"] {
+        opacity: 0;
+        animation: header-icons-animation 10s linear infinite;
+        animation-delay: 5s;
+      }
     }
 
-    img[designIcon="true"] {
-      opacity: 0;
-      animation: header-icons-animation 10s linear infinite;
-      animation-delay: 5s;
-    }
-  }
+    .start-link {
+      margin: auto;
+      width: max-content;
+      a {
+        font-family: source-sans-pro, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 3rem;
+        background-image: linear-gradient(45deg, #f5744c 0%, #ffcb0d 100%);
+        background-clip: text;
+        color: transparent;
+        text-decoration: none;
+        cursor: pointer;
+      }
 
-  .start-link {
-    margin: auto;
-    width: max-content;
-    a {
-      font-family: source-sans-pro, sans-serif;
-      font-weight: 300;
-      font-style: normal;
-      font-size: 3rem;
-      background-image: linear-gradient(45deg, #f5744c 0%, #ffcb0d 100%);
-      background-clip: text;
-      color: transparent;
-      text-decoration: none;
-      cursor: pointer;
-    }
+      a::after {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 2px;
+        background-image: linear-gradient(45deg, #f5744c 0%, #ffcb0d 100%);
+        transform: translateY(-3.25rem);
+        transition: ease-in-out 0.15s;
+      }
 
-    a::after {
-      content: "";
-      display: inline-block;
-      width: 0;
-      height: 2px;
-      background-image: linear-gradient(45deg, #f5744c 0%, #ffcb0d 100%);
-      transform: translateY(-3.25rem);
-      transition: ease-in-out 0.15s;
-    }
-
-    a:hover::after {
-      width: 100%;
-      transition: ease-in-out 0.15s;
+      a:hover::after {
+        width: 100%;
+        transition: ease-in-out 0.15s;
+      }
     }
   }
 }
