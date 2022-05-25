@@ -1,0 +1,214 @@
+.start-screen {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: #253143;
+  z-index: 3;
+
+  .start-title-container {
+    min-width: 25rem;
+    text-align: center;
+    margin-top: 500px;
+
+    h1 {
+      display: inline;
+      font-family: source-sans-pro, sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 3rem;
+      color: white;
+      cursor: normal;
+      user-select: none;
+    }
+
+    h1::after {
+      content: "Dev";
+      display: inline;
+      background-image: linear-gradient(0deg, #f5744c 0%, #ffcb0d 100%);
+      background-clip: text;
+      color: transparent;
+      animation: header-title-animation 10s linear infinite;
+    }
+
+    .start-title-cursor {
+      display: inline-block;
+      background-image: linear-gradient(0deg, #f5744c 0%, #ffcb0d 100%);
+      width: 2px;
+      height: 2rem;
+      margin-left: 0.25rem;
+      animation: header-cursor-animation 10s linear infinite;
+    }
+  }
+
+  .start-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem 4rem;
+    width: min(100vw, 17.5rem);
+    gap: 1rem 0;
+    margin: auto;
+
+    img {
+      display: grid;
+      justify-self: center;
+      align-self: center;
+      max-width: 75px;
+      max-height: 75px;
+      animation: header-icons-animation 10s linear infinite;
+    }
+
+    img[designIcon="true"] {
+      opacity: 0;
+      animation: header-icons-animation 10s linear infinite;
+      animation-delay: 5s;
+    }
+  }
+
+  .start-link {
+    margin: auto;
+    width: max-content;
+    a {
+      font-family: source-sans-pro, sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 3rem;
+      background-image: linear-gradient(45deg, #f5744c 0%, #ffcb0d 100%);
+      background-clip: text;
+      color: transparent;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    a::after {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 2px;
+      background-image: linear-gradient(45deg, #f5744c 0%, #ffcb0d 100%);
+      transform: translateY(-3.25rem);
+      transition: ease-in-out 0.15s;
+    }
+
+    a:hover::after {
+      width: 100%;
+      transition: ease-in-out 0.15s;
+    }
+  }
+}
+
+@keyframes header-icons-animation {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  47% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes header-cursor-animation {
+  0% {
+    background-image: linear-gradient(0deg, #f5744c 0%, #ffcb0d 100%);
+  }
+  10% {
+    background-image: none;
+  }
+  15% {
+    background-image: linear-gradient(0deg, #f5744c 0%, #ffcb0d 100%);
+  }
+  20% {
+    background-image: none;
+  }
+  25% {
+    background-image: linear-gradient(0deg, #f5744c 0%, #ffcb0d 100%);
+  }
+  30% {
+    background-image: none;
+  }
+  35% {
+    background-image: linear-gradient(0deg, #f5744c 0%, #ffcb0d 100%);
+  }
+  40% {
+    background-image: none;
+  }
+  45% {
+    background-image: linear-gradient(0deg, #f5744c 0%, #ffcb0d 100%);
+  }
+  55% {
+    background-image: linear-gradient(0deg, #f5744c 0%, #ffcb0d 100%);
+  }
+  60% {
+    background-image: none;
+  }
+  65% {
+    background-image: linear-gradient(0deg, #f5744c 0%, #ffcb0d 100%);
+  }
+  70% {
+    background-image: none;
+  }
+  75% {
+    background-image: linear-gradient(0deg, #f5744c 0%, #ffcb0d 100%);
+  }
+  80% {
+    background-image: none;
+  }
+  85% {
+    background-image: linear-gradient(0deg, #f5744c 0%, #ffcb0d 100%);
+  }
+  90% {
+    background-image: none;
+  }
+  95% {
+    background-image: linear-gradient(0deg, #f5744c 0%, #ffcb0d 100%);
+  }
+}
+
+@keyframes header-title-animation {
+  0% {
+    content: "Dev";
+  }
+  45% {
+    content: "Dev";
+  }
+  46% {
+    content: "De";
+  }
+  47% {
+    content: "Des";
+  }
+  48% {
+    content: "Desi";
+  }
+  49% {
+    content: "Desig";
+  }
+  50% {
+    content: "Design";
+  }
+  95% {
+    content: "Design";
+  }
+  96% {
+    content: "Desig";
+  }
+  97% {
+    content: "Desi";
+  }
+  98% {
+    content: "Des";
+  }
+  99% {
+    content: "De";
+  }
+  100% {
+    content: "Dev";
+  }
+}

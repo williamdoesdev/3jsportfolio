@@ -1,0 +1,13 @@
+diff --git a/node_modules/three-stdlib/controls/OrbitControls.js b/node_modules/three-stdlib/controls/OrbitControls.js
+index c534c7c..98e6e8a 100644
+--- a/node_modules/three-stdlib/controls/OrbitControls.js
++++ b/node_modules/three-stdlib/controls/OrbitControls.js
+@@ -77,7 +77,7 @@ class OrbitControls extends EventDispatcher {
+ 
+     _defineProperty(this, "rotateSpeed", 1.0);
+ 
+-    _defineProperty(this, "enablePan", true);
++    _defineProperty(this, "enablePan", false);
+ 
+     _defineProperty(this, "panSpeed", 1.0);
+ 

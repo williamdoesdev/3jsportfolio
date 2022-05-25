@@ -1,0 +1,53 @@
+@import url("https://use.typekit.net/kxi2tec.css");
+
+.projects-screen {
+  position: absolute;
+  width: 1920px;
+  height: 1420px;
+  background: white;
+  z-index: 3;
+
+  img {
+    position: absolute;
+  }
+
+  .descriptions-container {
+    position: absolute;
+    width: 850px;
+    height: 1324px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-83%);
+    overflow-y: auto;
+    background: transparent;
+
+    p {
+      font-family: input-mono, monospace;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.5rem;
+
+      color: lightgrey;
+      margin: 0 1rem;
+
+      span {
+        color: #e7894d;
+      }
+
+      a {
+        color: #b7d0e8;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .live-frame {
+    position: absolute;
+    width: 806px;
+    height: 990px;
+    right: 0;
+    top: 0;
+    transform: translateY(48px);
+  }
+}

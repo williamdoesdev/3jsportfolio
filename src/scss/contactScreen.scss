@@ -1,0 +1,53 @@
+@import url("https://use.typekit.net/kxi2tec.css");
+
+.contact-screen {
+  width: 500px;
+  height: 600px;
+
+  input {
+    position: absolute;
+    background: transparent;
+    margin-top: 30px;
+    font-family: adobe-handwriting-tiffany, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  textarea {
+    position: absolute;
+    background: transparent;
+    width: 475px;
+    margin-top: 30px;
+    font-family: adobe-handwriting-tiffany, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  button {
+    position: absolute;
+    background: transparent;
+    font-family: adobe-handwriting-tiffany, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+  }
+
+  button:hover {
+    color: #e7894d;
+  }
+
+  p {
+    position: absolute;
+    background: transparent;
+    color: red;
+    font-family: adobe-handwriting-tiffany, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: normal;
+    left: 10px;
+    top: 550px;
+  }
+}
