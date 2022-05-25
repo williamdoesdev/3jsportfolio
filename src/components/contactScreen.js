@@ -31,7 +31,7 @@ export default function ContactForm() {
         ></textarea>
         <button
           type="button"
-          style={{ left: "10px", top: "500px" }}
+          style={{ left: "10px", top: "700px" }}
           onClick={handleValidate}
         >
           Send Message
