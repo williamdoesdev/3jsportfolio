@@ -1,3 +1,3 @@
-# 3js Portfolop
+# 3js Portfolo
 
 My personal portfolio
